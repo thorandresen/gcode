@@ -13,17 +13,17 @@ public class App {
         Generator generator = new Generator();
 
         generator.move(4f, 3f);
-        generator.moveAndExtrudeConstraint(4f, 3f, 7f, 10f, 0.2f);
+        generator.moveAndExtrudeConstraint(4f, 3f, 7f, 20f, 0.2f);
         generator.move(4f, 3f);
-        generator.moveAndExtrudeConstraint(4f, 3f, 7f, 10f, 0.4f);
+        generator.moveAndExtrudeConstraint(4f, 3f, 7f, 20f, 0.4f);
         generator.move(4f, 3f);
-        generator.moveAndExtrudeConstraint(4f, 3f, 7f, 10f, 0.6f);
+        generator.moveAndExtrudeConstraint(4f, 3f, 7f, 20f, 0.6f);
         generator.move(4f, 3f);
-        generator.moveAndExtrudeActuator(4f, 3f, 10f, 6.8f, 0.8f);
+        generator.moveAndExtrudeActuator(4f, 3f, 20f, 6.8f, 0.8f);
         generator.move(4f, 3f);
-        generator.moveAndExtrudeActuator(4f, 3f, 10f, 6.8f, 1.0f);
+        generator.moveAndExtrudeActuator(4f, 3f, 20f, 6.8f, 1.0f);
         generator.move(4f, 3f);
-        generator.moveAndExtrudeActuator(4f, 3f, 10f, 6.8f, 1.2f);
+        generator.moveAndExtrudeActuator(4f, 3f, 20f, 6.8f, 1.2f);
 
         /*
          * generator.move(4f,3f); generator.moveAndExtrudeConstraint(4f, 3f, 7f, 10f,

@@ -19,6 +19,19 @@ public class App {
         generator.move(4f, 3f);
         generator.moveAndExtrudeConstraint(4f, 3f, 7f, 20f, 0.6f);
         generator.move(4f, 3f);
+        generator.move(4f, 3f);
+        generator.moveAndExtrudeConstraint(4f, 3f, 7f, 20f, 0.2f);
+        generator.move(4f, 3f);
+        generator.moveAndExtrudeConstraint(4f, 3f, 7f, 20f, 0.4f);
+        generator.move(4f, 3f);
+        generator.moveAndExtrudeConstraint(4f, 3f, 7f, 20f, 0.6f);
+        generator.move(4f, 3f);
+        generator.moveAndExtrudeActuator(4f, 3f, 20f, 6.8f, 0.8f);
+        generator.move(4f, 3f);
+        generator.moveAndExtrudeActuator(4f, 3f, 20f, 6.8f, 1.0f);
+        generator.move(4f, 3f);
+        generator.moveAndExtrudeActuator(4f, 3f, 20f, 6.8f, 1.2f);
+        generator.move(4f, 3f);
         generator.moveAndExtrudeActuator(4f, 3f, 20f, 6.8f, 0.8f);
         generator.move(4f, 3f);
         generator.moveAndExtrudeActuator(4f, 3f, 20f, 6.8f, 1.0f);
@@ -71,12 +84,9 @@ class Generator {
             throws IOException {
         float currentY = yStart;
         float currentX = xStart + width;
-
-        // lines.add("G1" + " X"+ xStart + " Y" + yStart + " Z" + z + " F600");
         float i;
 
         for (i = 0.4f; i < length; i += 0.4f) {
-            System.out.println(i);
             lines.add("G1" + " X" + currentX + " Y" + currentY + " Z" + z + " F600 E1");
             currentY = yStart + i;
             lines.add("G1" + " X" + currentX + " Y" + currentY + " Z" + z + " F600 E0.2");
@@ -93,8 +103,6 @@ class Generator {
             throws IOException {
         float currentY = yStart + width;
         float currentX = xStart;
-
-        // lines.add("G1" + " X"+ xStart + " Y" + yStart + " Z" + z + " F600");
         float i;
 
         for (i = 0.4f; i < length; i += 0.4f) {

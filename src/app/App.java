@@ -73,18 +73,19 @@ class Generator {
         float i;
 
         for (i = 0.4f; i < length-0.4; i += 0.4f) {
-            lines.add("G1" + " X" + currentX + " Y" + currentY + " Z" + z + " F1000 E0.06");
+            lines.add("G1" + " X" + currentX + " Y" + currentY + " Z" + z + " F1000 E0.03");
             currentX = xStart + i;
-            lines.add("G1" + " X" + currentX + " Y" + currentY + " Z" + z + " F1000 E0.01");
-            lines.add("G1" + " X" + currentX + " Y" + yStart + " Z" + z + " F1000 E0.06");
+            lines.add("G1" + " X" + currentX + " Y" + currentY + " Z" + z + " F1000 E0.006");
+            lines.add("G1" + " X" + currentX + " Y" + yStart + " Z" + z + " F1000 E0.03");
             i += 0.4f;
             currentX = xStart + i;
-            lines.add("G1" + " X" + currentX + " Y" + yStart + " Z" + z + " F1000 E0.01");
+            lines.add("G1" + " X" + currentX + " Y" + yStart + " Z" + z + " F1000 E0.006");
         }
-        lines.add("G1" + " X" + currentX + " Y" + currentY + " Z" + z + " F1000 E0.01");
+
+        lines.add("G1" + " X" + currentX + " Y" + currentY + " Z" + z + " F1000 E0.006");
         currentX = xStart + i;
-        lines.add("G1" + " X" + currentX + " Y" + currentY + " Z" + z + " F1000 E0.06");
-        lines.add("G1" + " X" + currentX + " Y" + yStart + " Z" + z + " F1000 E0.01");
+        lines.add("G1" + " X" + currentX + " Y" + currentY + " Z" + z + " F1000 E0.03");
+        lines.add("G1" + " X" + currentX + " Y" + yStart + " Z" + z + " F1000 E0.006");
         Files.write(file, lines, StandardCharsets.UTF_8);
     }
 
